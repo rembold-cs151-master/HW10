@@ -15,4 +15,4 @@ The homework pdf has the basic instructions, and you should definitely read the 
 __Remember to fill out the commented metadata at the top of each Python script please!__
 
 #### Testing
- - Auto-testing on these is more limited due to their graphical nature.
+ - Auto-testing on these is more limited due to their graphical nature. If I can come up with some basic tests, I'll add them at a later date, but at the moment these will just be visual checks.

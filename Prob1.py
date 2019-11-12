@@ -4,6 +4,7 @@
 # Est Time Spent (hrs):
 ##################################################
 
+import matplotlib.pyplot as plt
 from datetime import datetime #for formatting dates
 
 '''
