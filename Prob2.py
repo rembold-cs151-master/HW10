@@ -4,92 +4,102 @@
 # Est Time Spent (hrs):
 ##################################################
 
-import graphics as g #<- or import this however you like
+import arcade
 
-class Car:
-    def __init__(self,window,x,y):
+class Prob2():
+    '''
+    Class to display and move a circle about the screen using 
+    mouse control.
+
+    All the needed inputs for any method can be found in the documentation:
+    https://arcade.academy/arcade.html?highlight=arcade%20window#arcade.Window
+
+    A list of potential mouse presses is:
+    arcade.MOUSE_BUTTON_LEFT, arcade.MOUSE_BUTTON_RIGHT, arcade.MOUSE_BUTTON_MIDDLE
+
+    A list of potential key presses can be found here:
+    https://arcade.academy/arcade.key.html
+
+    '''
+
+    def __init__():
         '''
-        Creates a Car object at inital location in a
-        particular window.
+        Creates the necessary window into which everything is drawn.
 
         Inputs:
-            window (GraphWin): Window to draw Car in
-            x (integer): Initial horizontal position
-            y (integer): Initial vertical position
+         - width (int): the width of the window
+         - height (int): the height of the window
+         - title (str): the name of the window
 
-        Should initially have 5 attributes:
-            self.win (GraphWin, from parameters)
-            self.x (integer, from parameters)
-            self.y (integer, from parameters)
-            self.speed (float, value of 0.5)
-            self.direction (integer, value of 1)
-
-        Speed will determine how quickly your car moves and
-        self.direction will toggle between 1 and -1 to indicate
-        the direction your car is moving.
-
-        You should also call the method to create the car at
-        the end of this method.
+        Returns:
+         - (window obj): a handle for this window object
         '''
         pass
 
 
-    def createCar(self):
+    def on_draw():
         '''
-        Creates the component parts of the car *as data attributes*
-        and draws the parts initially to the window. A "car" is
-        composed of a 200 by 100 rectangle, with two "tires" of
-        radius 25 on the bottom (you can adjust the exact location
-        of the tires as you see fit to make a nice looking car).
-        Fill the car body with your favorite color and make the
-        tires black.
+        Function responsible for drawing anything to the screen.
+        Should always start the render and then draw any graphical
+        primitives.
 
-        Will create 3 new attributes:
-            self.body (Rectangle)
-            self.left_tire (Circle)
-            self.right_tire (Circle)
-
-        Draws the parts to the screen at the end.
+        Inputs:
+         - self (window obj): this window obj
+        Returns:
+         - none
         '''
         pass
 
-
-    def move(self):
+    def on_mouse_motion():
         '''
-        Moves all the pieces of the car in the direction given by
-        self.direction and by an amount given by self.speed. All
-        motion is horizontal, nothing in the vertical direction.
-        If the right edge of the car hits the right edge of the canvas,
-        the car should reflect back in the opposite direction. And
-        similarly for the left edge of the car hitting the left edge
-        of the canvas.
+        Function which is run whenever the mouse is moved in the window.
 
-        At the end of the function, you should call:
+        Inputs:
+         - x (float): x position of the mouse
+         - y (float): y position of the mouse
+         - dx (float): change in x since last run of method
+         - dy (float): change in y since last run of method
 
-            self.win.after(10, self.move)
-
-        This ensures that the move command will be run again in 10
-        milliseconds. Queuing this command in this fashion will
-        ensure that your car continues moving even if other movement
-        commands might "hold up" the program.
+        Returns:
+         - None
         '''
         pass
+
+    def on_mouse_press():
+        '''
+        Function which is run whenever a mouse key is pressed.
+
+        Inputs:
+            - x (float): x position of the mouse
+            - y (float): y position of the mouse
+            - button (int): what button was pressed
+            - modifiers (int): if shift, ctrl, alt etc were held down
+
+        Returns:
+            - None
+        '''
+        pass
+
+    def on_key_press():
+        '''
+        Function which is run whenever any key is pressed.
+
+        Inputs:
+            - key (int): the key that was hit. See key lookup table linked at top
+            - modifiers (int): if shift, ctrl, etc were held down
+        Returns:
+            - None
+        '''
+        pass
+
 
 
 def main():
     '''
-    Primary function responsible for creating the canvas, initialing
-    a single Car, starting it moving and then monitoring any key
-    presses to terminate the program when the key 'q' is pressed.
-
-    Should create the window, create the car, and then wait for a
-    mouse press. Once the mouse is pressed, the move method of the
-    created car should be activated and then a loop should be entered
-    to monitor potential key presses. Loop should be broken and the
-    window closed when the 'q' key is pressed.
+    Simple function to create the necessary window object and keep the window open.
     '''
-    pass
-
+    window = Prob2(500, 500, 'Problem 2')
+    arcade.run()
 
 
 # And here we will run main
